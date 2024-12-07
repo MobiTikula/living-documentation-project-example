@@ -16,5 +16,3 @@
     structured-output: false
     verbose-logging: true
     output-path: "./output"
-
-    
