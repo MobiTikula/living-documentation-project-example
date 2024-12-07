@@ -1,0 +1,30 @@
+name: Generate Living Documentation
+
+on:
+   workflow_dispatch:  # Trigger GitHub Actions manually.
+#   schedule:          # This would run the workflow to automatically.
+#     - cron: "0 0 * * *" 
+
+jobs:
+  generate_living_doc:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate Living Documentation
+        id: generate_living_doc
+        uses: AbsaOSS/living-doc-generator@v0.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.LIV_DOC_ACCESS_TOKEN }}  
+        with:
+          repositories: |
+            [
+              {
+                "organization-name": "MobiTikula",
+                "repository-name": "living-documentation-project-example",
+                "query-labels": ["DocumentedFeature"],
+                "projects-title-filter": []
+              }
+            ]
+          project-state-mining: true
+          structured-output: false
+          verbose-logging: true
+          output-path: ./output
