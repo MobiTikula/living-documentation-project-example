@@ -26,5 +26,5 @@ jobs:
             ]
           project-state-mining: true
           structured-output: false
-          verbose-logging: true
+          verbose-logging: false
           output-path: ./output
