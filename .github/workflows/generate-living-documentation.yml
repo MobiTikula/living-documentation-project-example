@@ -28,3 +28,9 @@ jobs:
           structured-output: false
           verbose-logging: false
           output-path: ./output
+          
+      - name: Upload Living Documentation Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: living-documentation
+          path: ./output  
