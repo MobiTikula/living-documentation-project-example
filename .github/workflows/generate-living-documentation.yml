@@ -1,9 +1,7 @@
 name: Generate Living Documentation
 
 on:
-   workflow_dispatch:  # Trigger GitHub Actions manually.
-#   schedule:          # This would run the workflow to automatically.
-#     - cron: "0 0 * * *" 
+   workflow_dispatch:  # Trigger GitHub Action manually.
 
 jobs:
   generate_living_doc:
@@ -34,3 +32,4 @@ jobs:
         with:
           name: living-documentation
           path: ./output  
+
