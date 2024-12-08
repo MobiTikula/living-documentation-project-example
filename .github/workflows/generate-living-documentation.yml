@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Generate Living Documentation
         id: generate_living_doc
-        uses: AbsaOSS/living-doc-generator@v0.2.0
+        uses: AbsaOSS/living-doc-generator@v0.1.0
         env:
           GITHUB_TOKEN: ${{ secrets.LIV_DOC_ACCESS_TOKEN }}  
         with:
