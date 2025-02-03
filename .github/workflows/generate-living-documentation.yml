@@ -28,7 +28,7 @@ jobs:
           output-path: ./output
           
       - name: Upload Living Documentation Artifact
-        uses: actions/upload-artifact@v3.1.2
+        uses: actions/upload-artifact@v4
         with:
           name: living-documentation
           path: ./output  
